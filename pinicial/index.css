@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(333deg,rgba(0, 71, 99, 1) 52%, rgba(0, 139, 194, 1) 100%);
+    color: white;
+  }
+
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e); /* fallback */
+  }
+
+  header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  nav a {
+    padding: 0px 20px;
+   }
+   
+   
+   nav a img {
+     width: 30px;
+     height: 30px;
+      object-fit: cover;
+     
+   }
+ 
+   .tooltip {
+     position: relative;
+     display: inline-block;
+   }
+   
+   .tooltip-text {
+     
+     visibility: hidden;
+     opacity: 0;
+     width: max-content;
+     background-color: rgba(0, 0, 0, 0.8);
+     color: #fff;
+     text-align: center;
+     border-radius: 6px;
+     padding: 5px 10px;
+     position: absolute;
+     z-index: 1;
+     top: 120%; /* aparece acima da imagem */
+     left: 50%;
+     transform: translateX(-50%);
+     transition: opacity 0.2s ease-in-out;
+     white-space: nowrap;
+     font-size: 13px;
+   }
+   
+   .tooltip:hover .tooltip-text {
+     visibility: visible;
+     opacity: 1;
+   }
+  .main {
+    text-align: center;
+    padding: 100px 20px 50px;
+  }
+
+  .main h1 {
+    font-size: 25px;
+    margin-bottom: 5%;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    background-color: #00c853;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .cta-button:hover {
+    background-color: #00a74f;
+  }
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 80px;
+  }
+
+  /* Modal Login */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+  }
+
+  .modal-content label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: white;
+  }
+
+  .login-button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .login-button:hover {
+    background-color: #005fa3;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .modal-content {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .extra-options {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .extra-options a {
+    color: #84e0f5;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .extra-options a:hover {
+    text-decoration: underline;
+
+    /* modal de registro */
+    
+  .Modalregistro {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .modal-content-registro {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .modal-content-registro h2 {
+    margin-top: 0;
+  }
+
+  .modal-content-registro label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .modal-content-registro input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .registro-button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  }
+
+  footer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 80px;
+    gap: 25%;
+  }
+
+  .footer-links, .footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #84e0f5;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.85rem;
+    padding: 2%;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social img {
+    width: 35px;
+    margin: 0 5px;
+    vertical-align: middle;
+    padding: 10%;
+
+  }
+  

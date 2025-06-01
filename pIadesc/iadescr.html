@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA.Score</title>
+  <link rel="stylesheet" href="../plogin/painel.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="logo">IA.<span class="highlight">SCORE</span></div>
+    <div class="search-container">
+      <input type="text" placeholder="BUSCADOR" id="searchInput">
+      <button onclick="handleSearch()"><span class="search-icon">🔍</span></button>
+    </div>    
+    <nav>
+      <a class="tooltip" href="../plogin/painel.html">
+        <img src="../imgs/inicio.png" alt="Inicio">
+        <span class="tooltip-text">Início</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/sobrenos.png" alt="Sobre Nós">
+        <span class="tooltip-text">Sobre Nós</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/suporte.png" alt="Suporte">
+        <span class="tooltip-text">Suporte</span>
+      </a>
+    </nav>
+    <div class="user" id="userDisplay">
+      <img src="../imgs/usuario.png" alt="usuario">
+      <span id="nomeUsuario"></span>
+    </div>
+    <button id="toggleTheme" title="Alternar tema">🌙</button>
+  </header>
+
+  <main>
+    
+    <section class="ia-detalhe">
+     
+      <h2 id="tituloIA">Nome da IA</h2>
+      <img id="imagemIA" src="" alt="Imagem da IA">
+      <div class="acessar-ia">
+        <a id="linkIA" href="#" target="_blank" title="Ir para o site oficial">
+        <img src="../imgs/acesso-direto.png" alt="">
+      </a>
+      </div>
+      <div class="voltar">
+        <a href="#" onclick="voltarPagina()" title="Voltar">
+          <img src="../imgs/voltar.png" alt="Voltar">
+        </a>
+      </div>
+      
+      
+    
+      <div class="avaliacao-container">
+        <div id="estrelasIA" class="estrelasdesc"></div>
+        <p id="notaIA" class="notadesc">Nota: 0/5</p>
+        <div id="avaliacoesIA" class="avaliacoesdesc"> </div>
+      </div>
+    
+      <h1>
+        Categoria: 
+        <p id="categoriaIA" class="categoria">Categoria: --</p>
+      </h1>
+      <p id="descricaoIA" class="descricao">Descrição completa da IA...</p>
+    
+      <hr style="margin: 30px 0; border-color: #444;">
+    
+      <div class="comentarios">
+        <h3>Comentários</h3>
+        <div id="comentariosLista" class="comentarios-lista">
+          <p><strong>@lucas.alves</strong> “Uso todo dia pra estudar e tirar dúvida rápida.”  </p>
+          <p><strong>@camila_writer</strong> “Facilitou minha vida na produção de conteúdo.”  </p>
+          <p><strong>@joao_dev</strong> “Responde código melhor que muita gente.”  </p>
+        </div>
+        <textarea id="novoComentario" placeholder="Escreva um comentário..."></textarea>
+        <button onclick="adicionarComentario()">Comentar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a> 
+      <a href="#">Política de Privacidade</a> 
+      <a href="#">Contato</a>
+    </div>
+    Copyright © 2025 IA.Score. Todos os direitos reservados.<br />
+    CNPJ: 00.000.000/000-00<br />
+    ia.score@gmail.com
+    <div class="footer-social">
+      <a href="#"><img src="../imgs/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../particula/particulas.js"></script>
+  <script src="iadescr.js"></script>
+  <script src="../dadosia/dadosia.js"></script>
+  <script src="../plogin/painel.js"></script>
+  <script>
+    function handleSearch() {
+    const searchValue = document.getElementById("searchInput").value.trim();
+  
+    if (searchValue) {
+      localStorage.setItem("termoBusca", searchValue);
+      window.location.href = `../plogin/resultado.html?busca=${encodeURIComponent(searchValue)}`;
+
+    }
+  }
+  
+  </script>
+  
+</body>
+</html>

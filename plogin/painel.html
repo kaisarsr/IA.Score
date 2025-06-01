@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel - IA.Score</title>
+  <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="logo">IA.<span class="highlight">SCORE</span></div>
+    <div class="search-container">
+      <input type="text" placeholder="BUSCADOR" id="searchInput">
+      <button onclick="handleSearch()"><span class="search-icon">🔍</span></button>
+    </div>    
+    <nav>
+      <a class="tooltip" href="../plogin/painel.html">
+        <img src="../imgs/inicio.png" alt="Inicio">
+        <span class="tooltip-text">Início</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/sobrenos.png" alt="Sobre Nós">
+        <span class="tooltip-text">Sobre Nós</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/suporte.png" alt="Suporte">
+        <span class="tooltip-text">Suporte</span>
+      </a>
+    </nav>
+    
+    <div class="user" id="userDisplay">
+      <img src="../imgs/usuario.png" alt="usuario">
+      <span id="nomeUsuario"></span>
+    </div>
+    <button id="toggleTheme" title="Alternar tema">🌙</button>
+    
+
+  </header>
+
+  <main>
+    <h2 class="em-alta">EM <span class="highlight-orange">ALTA</span></h2>
+    <section class="em-alta-card">
+      <div class="ia-info">
+        <div class="ia-imagem">
+          <span class="ia-nome">ChatGPT</span>
+          <img src="../imgs/chatgpt.png" alt="ChatGPT" />
+        </div>
+        <div class="descricao">
+          <p class="slogan">"Converse com a IA mais usada do mundo."</p>
+          <p class="descricao-curta">
+            O ChatGPT é uma IA conversacional da OpenAI que responde perguntas, escreve textos e muito mais.
+          </p>
+        </div>
+      </div>
+    
+      <div class="comentarios">
+        <h4>Comentários recentes:</h4>
+        <div class="comentario">“Me ajuda demais no trabalho!” — @ana_dev</div>
+        <div class="comentario">“Top pra estudar e fazer resumo.” — @leo_mkt</div>
+        <div class="comentario">“Responde até código!” — @joaozin</div>
+        <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('chatgpt')">Ver mais →</a>
+      </div>
+
+      <div class="estrelas-bloco">
+        <div class="nota-estrelas">
+          <span class="nota">4.9</span>
+          <div class="estrelas">
+            <img src="../imgs/estrela.png" alt="⭐">
+            <img src="../imgs/estrela.png" alt="⭐">
+            <img src="../imgs/estrela.png" alt="⭐">
+            <img src="../imgs/estrela.png" alt="⭐">
+            <img src="../imgs/estrela.png" alt="⭐">
+          </div>
+        </div>
+        <div class="avaliacao">
+          <h2>Avaliações: 1.412</h2>
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <h2 class="interessar">PODE TE INTERESSAR</h2>
+    <section class="placeholder-cards">
+
+      <div class="ia-info">
+        <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('chatgpt')">
+          <div class="card">
+            <img src="../imgs/chatgpt.png" alt="ChatGPT">
+            <h4>ChatGPT</h4>
+            <p class="descricao-curta">Geração de textos, códigos e muito mais.</p>
+          </div>
+        </a>
+        <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('Zendesk AI')">
+        <div class="card">
+          <img src="../imgs/zendesk.png" alt="Zendesk AI">
+          <h4>Zendesk AIy</h4>
+          <p class="descricao-curta">IA para Atendimento ao Cliente.</p>
+        </div>
+        </a>
+        <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('Midjourney')">
+        <div class="card">
+          <img src="../imgs/Midjourney.png" alt="Midjourney">
+          <h4>Midjourney</h4>
+          <p class="descricao-curta">Geração de imagens realistas via texto.</p>
+        </div>
+      </a>
+      <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('Copilot')">
+        <div class="card">
+          <img src="../imgs/githubcopilot.webp" alt="GitHub Copilot">
+          <h4>GitHub Copilot</h4>
+          <p class="descricao-curta">Sugere e completa código em tempo real com base no que o dev está fazendo.</p>
+        </div>
+      </a>
+    </section>
+    <h2 class="lancamentos">NOVOS LANCAMENTOS</h2>
+    <section class="newlancamentos"></section>
+
+    <section class="destaque-semana">
+      <h3>🔥 Destaque da Semana</h3>
+      <div class="destaque-card">
+        <img src="../imgs/chatgpt5.png" alt="ChatGPT 5">
+        <div class="destaque-info">
+          <h4>ChatGPT 5.0 chegou</h4>
+          <p>Com mais contexto, velocidade e criatividade — o novo modelo da OpenAI redefine o uso de IAs no dia a dia.</p>
+          <a href="../pIadesc/iadescr.html" class="card-link" onclick="verDetalhesIA('chatgpt')">Ver mais →</a>
+        </div>
+      </div>
+    </section>
+
+
+  </main> 
+  <footer>
+  
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a> 
+      <a href="#">Política de Privacidade</a> 
+      <a href="#">Contato</a>
+    </div>
+
+    Copyright © 2025 IA.Score. Todos os direitos reservados.<br />
+    CNPJ: 00.000.000/000-00<br />
+    ia.score@gmail.com
+  
+    <div class="footer-social">
+      <a href="#"><img src="../imgs/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../particula/particulas.js"></script>
+   <script src="painel.js"></script>
+   
+</body>
+</html>

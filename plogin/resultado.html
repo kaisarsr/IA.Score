@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultados da Busca - IA.Score</title>
+  <link rel="stylesheet" href="painel.css" />
+<style>
+ .card img {
+  width: 150px;
+  height: 150px; 
+  border-radius: 10px;
+  object-fit: cover; 
+}
+</style>
+</head>
+<body>
+ 
+
+  <header>
+    <div class="logo">IA.<span class="highlight">SCORE</span></div>
+    <div class="search-container">
+      <input type="text" placeholder="BUSCADOR" id="searchInput">
+      <button onclick="handleSearch()"><span class="search-icon">🔍</span></button>
+    </div>    
+    <nav>
+      <a class="tooltip" href="../plogin/painel.html">
+        <img src="../imgs/inicio.png" alt="Inicio">
+        <span class="tooltip-text">Início</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/sobrenos.png" alt="Sobre Nós">
+        <span class="tooltip-text">Sobre Nós</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/suporte.png" alt="Suporte">
+        <span class="tooltip-text">Suporte</span>
+      </a>
+    </nav>
+    <div class="user" id="userDisplay">
+      <img src="../imgs/usuario.png" alt="usuario">
+      <span id="nomeUsuario"></span>
+    </div>
+    <button id="toggleTheme" title="Alternar tema">🌙</button>
+    
+  </header>
+
+  <h2 class="title">Resultados para: <span id="termo-busca" class="highlight-orange"></span></h2>
+  <main class="conteudo-busca">
+    
+    <aside class="filtro-box">
+      <h3>FILTRO</h3>
+      <strong>CATEGORIAS</strong><br />
+      <label><input type="checkbox" name="categoria" value="texto"> TEXTO E ESCRITA</label><br>
+      <label><input type="checkbox" name="categoria" value="imagem"> GERAÇÃO DE IMAGEM</label><br>
+      <label><input type="checkbox" name="categoria" value="assistente"> ASSISTENTE VIRTUAL</label><br>
+      <label><input type="checkbox" name="categoria" value="educacao"> EDUCAÇÃO</label><br>
+      <label><input type="checkbox" name="categoria" value="programacao"> PROGRAMAÇÃO</label><br>
+    
+      <br><strong>PLANO</strong><br>
+      <label><input type="checkbox" name="plano" value="gratis"> GRATUITO</label><br>
+      <label><input type="checkbox" name="plano" value="pago"> PAGO</label><br>
+    
+      <button onclick="aplicarFiltro()">APLICAR FILTRO</button>
+    </aside>
+    <div id="resultados-container" class="placeholder-cards">
+    </div>
+  </main>
+
+  <footer>
+  
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a> 
+      <a href="#">Política de Privacidade</a> 
+      <a href="#">Contato</a>
+    </div>
+
+    Copyright © 2025 IA.Score. Todos os direitos reservados.<br />
+    CNPJ: 00.000.000/000-00<br />
+    ia.score@gmail.com
+  
+    <div class="footer-social">
+      <a href="#"><img src="../imgs/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../particula/particulas.js"></script>
+  <script src="../dadosia/dadosia.js"></script>
+  <script src="painel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA.Score</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <nav>
+      <a class="tooltip" href="../plogin/painel.html">
+        <img src="../imgs/inicio.png" alt="Inicio">
+        <span class="tooltip-text">Início</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/sobrenos.png" alt="Sobre Nós">
+        <span class="tooltip-text">Sobre Nós</span>
+      </a>
+      <a class="tooltip" href="#">
+        <img src="../imgs/suporte.png" alt="Suporte">
+        <span class="tooltip-text">Suporte</span>
+      </a>
+    </nav>
+    <button id="toggleTheme" title="Alternar tema">🌙</button>
+  </header>
+
+  <section class="main">
+    <div class="logo">IA.<span style="color: #84e0f5">SCORE</span></div>
+    <h1>SUA FONTE CONFIÁVEL PARA AVALIAR E ENCONTRAR INTELIGÊNCIAS ARTIFICIAIS</h1>
+    <button class="cta-button" onclick="openLogin()">VER AGORA</button>
+  </section>
+
+  <footer>
+  
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a> 
+      <a href="#">Política de Privacidade</a> 
+      <a href="#">Contato</a>
+    </div>
+
+    Copyright © 2025 IA.Score. Todos os direitos reservados.<br />
+    CNPJ: 00.000.000/000-00<br />
+    ia.score@gmail.com
+  
+    <div class="footer-social">
+      <a href="#"><img src="../imgs/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../imgs/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+
+  
+  <!-- Modal de Login -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+    <label for="login-gmail">Gmail</label>
+    <input type="text" id="login-gmail" placeholder="Digite seu Gmail" />
+
+    <label for="login-password">Senha</label>
+    <input type="password" id="login-password" placeholder="Digite sua senha" />
+
+    <button class="login-button">Entrar</button>
+
+    <div class="extra-options">
+      <a href="#">Esqueci minha senha</a>
+      <span> | </span>
+      <a href="#" onclick="openRegistro()">Criar conta</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Registro -->
+<div id="registroModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeRegistro()">&times;</span>
+    <h2>Criar conta</h2>
+
+    <label for="registro-user">Nome de usuário</label>
+    <input type="text" id="registro-user" placeholder="Seu nome de usuário" />
+
+    <label for="registro-gmail">Gmail</label>
+    <input type="text" id="registro-gmail" placeholder="Digite seu Gmail" />
+
+    <label for="registro-password">Senha</label>
+    <input type="password" id="registro-password" placeholder="Crie uma senha" />
+
+    <button class="registro-button">Registrar</button>
+  </div>
+</div>
+
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../particula/particulas.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
